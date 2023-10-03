@@ -27,3 +27,16 @@ def normalize(array):
         except ZeroDivisionError:
             normalize_data.append(1 * len(normalize_data)) # поднимаю ошибку чисто на всякий случай, на практике нужно очень постараться чтоб её поймать
     return normalize_data
+
+def M(array):
+    """
+    Функция для подсчета матожидания
+    """
+    return sum(normalize(array))/(len(array))
+
+def D(array, M):
+    """
+    Функция для подсчета дисперсии
+    """
+    new_array = list((i - M)**2 for i in normalize(array))
+    return sum(new_array)/len(array)
