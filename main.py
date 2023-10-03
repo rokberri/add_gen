@@ -5,5 +5,5 @@ from tests import *
 gen = generator.Generator(32568449)
 
 array = gen.generate_list(10000)
-print(T(array))
+print(normalize(array))
 
