@@ -8,7 +8,7 @@ from visual_outputs import generate_visual_output
 # Тут в цикле я меняю только m, посмотри файл с генератором, чтоб понять что как 
 
 TEST_VALUE = 32568449
-for i in range(5000):
+for i in range(32568449, 32568549):
     gen = generator.Generator(i) 
     array = gen.generate_list(2500)
     if is_good_seq(array):

@@ -81,6 +81,11 @@ def squeeze_test(n_array:list[float])->list[int]:
     return res
 
 def is_good_seq(array):
+    """
+    Проверка последовательности на "хорошесть"
+    Если все параметры и тесты в сумме откланяются от идельных не более чем на 20% то
+    последовательность хорошая
+    """
     if T(array)>=int(len(array)*0.2):
         perf_sum = 1.083
         cur_sum = M(array) + D(array) + sequence_bit_test(array)
